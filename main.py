@@ -2,14 +2,14 @@ import pygame
 import random
 
 
-def lylchudem():
+def get_image():
     icon = pygame.image.load("images/icon.png").convert_alpha()
-    bg = pygame.image.load("images\\bg.png").convert()
+    bg = pygame.image.load("images/bg.png").convert()
     ghost = pygame.image.load("images/ghost.png").convert_alpha()
-    walk_right = [pygame.image.load("images\\player_right\\player_right1.png").convert_alpha(),
-                  pygame.image.load("images\\player_right\\player_right2.png").convert_alpha(),
-                  pygame.image.load("images\\player_right\\player_right3.png").convert_alpha(),
-                  pygame.image.load("images\\player_right\\player_right4.png").convert_alpha()
+    walk_right = [pygame.image.load("images/player_right/player_right1.png").convert_alpha(),
+                  pygame.image.load("images/player_right/player_right2.png").convert_alpha(),
+                  pygame.image.load("images/player_right/player_right3.png").convert_alpha(),
+                  pygame.image.load("images/player_right/player_right4.png").convert_alpha()
                   ]
     walk_left = [pygame.image.load("images/player_left/player_left1.png").convert_alpha(),
                  pygame.image.load("images/player_left/player_left2.png").convert_alpha(),
@@ -98,7 +98,7 @@ def main():
     screen = pygame.display.set_mode((width, height))
     pygame.display.set_caption("Game")
 
-    icon, bg, ghost, walk_right, walk_left, game_over_font, font, bullet = lylchudem()
+    icon, bg, ghost, walk_right, walk_left, game_over_font, font, bullet = get_image()
 
     pygame.display.set_icon(icon)
 
@@ -124,7 +124,7 @@ def main():
     bullets_left = 3  # Use a list to pass by reference
     bullets = []
 
-    gameplay = False
+    gameplay = True
     running = True
     while running:
         # Draw background
